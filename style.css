@@ -494,13 +494,13 @@ h2.section-title {
 
 .stat-item {
     flex: 1;
-    padding: 0 40px 0 0;
+    padding: 0 40px;
     border-right: 1px solid var(--border);
 }
 
 .stat-item:last-child {
     border-right: none;
-    padding-left: 40px;
+    padding-right: 0;
 }
 
 .stat-item:first-child {
@@ -514,10 +514,6 @@ h2.section-title {
     color: var(--accent);
     line-height: 1;
     margin-bottom: 8px;
-}
-
-.stat-num--offset {
-    padding-left: 40px;
 }
 
 .stat-label {
@@ -985,7 +981,4 @@ footer .copy {
         border-bottom: none;
     }
 
-    .stat-num--offset {
-        padding-left: 0;
-    }
 }
