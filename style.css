@@ -498,6 +498,10 @@ h2.section-title {
     border-right: 1px solid var(--border);
 }
 
+.stat-num--offset {
+    padding-left: 40px;
+}
+
 .stat-item:last-child {
     border-right: none;
     padding-right: 0;
