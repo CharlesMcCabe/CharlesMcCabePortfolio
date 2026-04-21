@@ -13,7 +13,7 @@ const projectData = {
     sherbee: {
         title: 'Sherbee',
         type: 'Entrepreneurial project · Ongoing',
-        description: 'Sherbee is a startup developing audio-powered varroa mite detection technology for beekeepers. I contributed to product development, built the marketing website, developed strategic partnerships with beekeepers and agricultural organizations, and helped secure grants and external funding. This project combines embedded systems, machine learning, and business development.',
+        description: 'Sherbee is a startup developing audio-powered varroa mite detection technology for beekeepers. I contributed to product development, built the marketing website, developed strategic partnerships with beekeepers and agricultural organizations, and helped secure grants and external funding. This project combines embedded systems, signal processing, and business development.',
         technologies: ['Web Development', 'Signal Processing', 'IoT', 'Embedded Systems', 'Business Strategy'],
         links: [
             { name: 'Visit Website', url: 'https://sherbee.ca' },
