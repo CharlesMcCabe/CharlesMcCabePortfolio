@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCUS — Roboracer Vienna 2026</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-page">
+  <nav>
+    <div class="nav-logo">CM_portfolio</div>
+    <ul class="nav-links">
+      <li><a href="charlesMcCabe.html">Home</a></li>
+      <li><a href="charlesMcCabe.html#projects">Projects</a></li>
+      <li><a href="charlesMcCabe.html#about">About</a></li>
+      <li><a href="charlesMcCabe.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="project-hero-left">
+      <div class="project-kicker">Autonomous vehicle · Ongoing</div>
+      <h1 class="project-title-lg">ARCUS — Roboracer Vienna 2026</h1>
+      <p class="project-summary">ARCUS is my team building an autonomous racing vehicle competing at Roboracer ICRA 2026 in Vienna. I implemented
+        core localization and control algorithms including SLAM for real-time mapping, particle filtering for robust state
+        estimation, and pure pursuit++ trajectory tracking. The full autonomous driving stack was developed using ROS2 on
+        a Jetson Orin Nano, enabling real-time perception and decision-making at racing speeds. To see the car in action, take a look at our LinkedIn page.</p>
+      <div class="project-cta-row">
+        <a class="btn-primary" href="https://github.com/robotique-udes/arcus" target="_blank"
+          rel="noopener noreferrer">View on GitHub →</a>
+        <a class="btn-ghost" href="https://www.linkedin.com/company/arcus-robotique-udes" target="_blank"
+          rel="noopener noreferrer">Team LinkedIn →</a>
+        <a class="btn-ghost" href="charlesMcCabe.html#projects">Back to projects →</a>
+      </div>
+    </div>
+    <div class="project-hero-right">
+      <img src="resources/imgs/arcus_car.jpg" alt="ARCUS race car">
+    </div>
+  </header>
+
+  <section class="project-section">
+    <div class="project-detail-grid">
+      <div>
+        <h2 class="project-detail-title">Overview</h2>
+        <p class="project-detail-copy">ARCUS blends autonomous perception, state estimation, and control into a high-speed
+          racing platform. My focus was on delivering stable localization and smooth trajectory tracking while
+          keeping the stack real-time and competition-ready.</p>
+        <p class="project-detail-copy">One of the things I developed is a real-time trajectory risk assessment system. Using a local costmap, the
+          current trajectory is evaluated for potential collisions in real-time with a time-to-collision weighting
+          scheme. This enables fluid switching between pure pursuit and disparity extender algorithms for dynamic
+          obstacle avoidance and overtaking. I also implemented the simulation stack to test and validate algorithms
+          in a controlled environment.</p>
+        <ul class="project-highlights">
+          <li>Implemented SLAM and particle filtering for robust localization.</li>
+          <li>Built pure pursuit++ trajectory tracking for high-speed control.</li>
+          <li>Integrated the full ROS2 autonomy stack on Linux.</li>
+          <li>Selected to compete at Roboracer ICRA 2026 in Vienna.</li>
+        </ul>
+      </div>
+      <div class="project-side">
+        <div class="project-media">
+          <img src="resources/imgs/kingston.jpeg" alt="ARCUS at Kingston">
+        </div>
+        <div class="project-tech-panel">
+          <h4>Technologies</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">ROS2</span>
+            <span class="tech-tag">SLAM</span>
+            <span class="tech-tag">Particle Filter</span>
+            <span class="tech-tag">Pure Pursuit++</span>
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Autonomous Navigation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="copy">© 2026 Charles McCabe — Sherbrooke, QC</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/">LinkedIn</a>
+      <a href="mailto:mccc1201@usherbrooke.ca">mccc1201@usherbrooke.ca</a>
+    </div>
+  </footer>
+</body>
+
+</html>

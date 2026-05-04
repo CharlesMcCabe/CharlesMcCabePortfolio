@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ball balancing robot</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-page">
+  <nav>
+    <div class="nav-logo">CM_portfolio</div>
+    <ul class="nav-links">
+      <li><a href="charlesMcCabe.html">Home</a></li>
+      <li><a href="charlesMcCabe.html#projects">Projects</a></li>
+      <li><a href="charlesMcCabe.html#about">About</a></li>
+      <li><a href="charlesMcCabe.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="project-hero-left">
+      <div class="project-kicker">Mechatronics</div>
+      <h1 class="project-title-lg">Ball balancing robot</h1>
+      <p class="project-summary">A complete electromechanical system I designed and built from scratch. This solo project spans
+        mechanical design, PCB design with custom electronics, and real-time control software. I integrated a Raspberry
+        Pi 5 with stepper motor drivers for precise actuation and implemented closed-loop visual control using OpenCV for
+        real-time ball position detection and servo loop compensation.</p>
+      <div class="project-cta-row">
+        <a class="btn-primary" href="https://github.com/CharlesMcCabe/BallBalancer" target="_blank"
+          rel="noopener noreferrer">View on GitHub →</a>
+        <a class="btn-ghost"
+          href="https://cad.onshape.com/documents/8632da1a62aee0745924fd5b/w/012cad01de5451e598a468e9/e/7d93e9c7a08a21e8eda356c5"
+          target="_blank" rel="noopener noreferrer">View CAD in Onshape →</a>
+        <a class="btn-ghost" href="https://www.youtube.com/shorts/rVlpZmMtKw4" target="_blank"
+          rel="noopener noreferrer">Watch demo →</a>
+        <a class="btn-ghost" href="charlesMcCabe.html#projects">Back to projects →</a>
+      </div>
+    </div>
+    <div class="project-hero-right">
+      <img src="resources/imgs/bbbot.jpg" alt="Ball balancing robot">
+    </div>
+  </header>
+
+  <section class="project-section">
+    <div class="project-detail-grid">
+      <div>
+        <h2 class="project-detail-title">Overview</h2>
+        <p class="project-detail-copy">This build combines mechanical design, electronics, and control into a single
+          closed-loop system. The core challenge was achieving stable visual tracking and smooth actuation for real-time
+          balancing. Tuning demanded precise, low-latency ball tracking, and the iterative process to stabilize the
+          system took significant experimentation. Designing the PCB was another hurdle since it was my first board. That learning curve was a big
+          reason I took on the project: to gain hands-on experience in end-to-end system design and troubleshooting.</p>
+        <ul class="project-highlights">
+          <li>Designed the frame, linkage, and electronics as a cohesive system.</li>
+          <li>Built custom PCB and motor driver integration for precise actuation.</li>
+          <li>Implemented OpenCV-based ball detection and feedback control.</li>
+          <li>Deployed on Raspberry Pi 5 with real-time software tuning.</li>
+        </ul>
+      </div>
+      <div class="project-tech-panel">
+        <h4>Technologies</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Raspberry Pi 5</span>
+          <span class="tech-tag">Stepper Motors</span>
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">PCB Design</span>
+          <span class="tech-tag">Real-time Control</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="copy">© 2026 Charles McCabe — Sherbrooke, QC</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/">LinkedIn</a>
+      <a href="mailto:mccc1201@usherbrooke.ca">mccc1201@usherbrooke.ca</a>
+    </div>
+  </footer>
+</body>
+
+</html>

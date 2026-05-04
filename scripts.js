@@ -26,6 +26,7 @@ const projectData = {
         description: 'A complete electromechanical system designed and built from scratch. The project spans mechanical design (frame and linkage), PCB design with custom electronics, and real-time control software. I integrated a Raspberry Pi 5 with stepper motor drivers for precise actuation and implemented closed-loop visual control using OpenCV for real-time ball position detection and servo loop compensation.',
         technologies: ['Raspberry Pi 5', 'Stepper Motors', 'OpenCV', 'PCB Design', 'Real-time Control', 'Python'],
         links: [
+            { name: 'View on GitHub', url: 'https://github.com/CharlesMcCabe/BallBalancer' },
             { name: 'Watch Demo', url: 'https://www.youtube.com/shorts/rVlpZmMtKw4' },
             { name: 'View CAD in Onshape', url: 'https://cad.onshape.com/documents/8632da1a62aee0745924fd5b/w/012cad01de5451e598a468e9/e/7d93e9c7a08a21e8eda356c5' }
         ]
@@ -43,14 +44,14 @@ const projectData = {
     huski: {
         title: 'Avalanche rescue robot',
         type: 'Mobile robotics',
-        description: 'A proof-of-concept thermal detection robot designed for avalanche rescue operations. The system features tracked propulsion for terrain navigation and integrated thermal sensing for victim detection. Nearly all structural components were 3D-printed, demonstrating rapid prototyping for specialized robotics applications.',
+        description: 'A proof-of-concept thermal detection robot designed for avalanche rescue operations. The system features tracked propulsion for terrain navigation and integrated thermal sensing for victim detection. Nearly all structural components were 3D-printed, demonstrating rapid prototyping for specialized robotics applications. I principally contributed to the mechanical design, notably the custom track system.',
         technologies: ['Mobile Robotics', '3D Printing', 'Thermal Imaging', 'Tracked Locomotion', 'Embedded Systems'],
         links: []
     },
     thumper: {
         title: 'Dune Thumper replica',
         type: 'Mechanical design',
-        description: 'A faithful recreation of the iconic Thumper vehicle from Dune, built with authentic mechanical systems and screen-accurate proportions. The project showcases mechanical design, fabrication techniques, and engineering aesthetics. Features working mechanisms that replicate the distinctive leg motion of the original vehicle.',
+        description: 'A faithful recreation of the iconic Thumper vehicle from Dune, built with authentic mechanical systems and screen-accurate proportions. This was a fun project to bring a piece of sci-fi to life, combining my passion for design and cinema.',
         technologies: ['Mechanical Design', 'Fabrication', 'Mechanical Systems', 'CAD'],
         links: [
             { name: 'Watch Demo', url: 'https://youtube.com/shorts/60UvBixNILU' }
@@ -59,7 +60,7 @@ const projectData = {
     crc: {
         title: 'CRC competition robot',
         type: 'Competition',
-        description: 'A competitive robot designed and built under the tight constraints of the CRC competition: limited budget, small team, and strict timelines. The project required full mechanical design, assembly, and integration while managing resource constraints effectively.',
+        description: 'A competitive robot designed and built under the tight constraints of the CRC competition: limited budget, small team, and strict timelines. I designed pretty much the whole mechanical system, including the elevator lift, the effector and the frame. The project was a great exercise in rapid prototyping, iterative design, and teamwork under pressure.',
         technologies: ['Mechanical Design', 'CAD', 'Project Management', 'Rapid Prototyping'],
         links: []
     },
@@ -73,14 +74,14 @@ const projectData = {
     bioterra: {
         title: 'Bioterra',
         type: 'Process engineering',
-        description: 'A seed-bomb production line demonstrating automated manufacturing of biodegradable seed bombs. The project showcases process engineering, automation design, and sustainable product development. It serves as a conceptual demonstration of germination technology and eco-friendly packaging materials.',
+        description: 'A seed-bomb production line demonstrating automated manufacturing of biodegradable seed bombs. The project showcases process engineering, automation design, and sustainable product development. It serves as a conceptual demonstration of germination technology and eco-friendly packaging materials. I worked on an automatic warehousing and dispensing system for the seed bombs, as well as the overall process flow design.',
         technologies: ['Process Engineering', 'Automation', 'Manufacturing', 'Sustainability'],
         links: []
     },
     rapidus: {
         title: 'Rapidus — Robot in 3 days',
         type: 'Competition · Sprint',
-        description: 'Built functional FRC competition robots in just 3 days as part of a rapid prototyping challenge. Beyond the engineering feat, I documented the entire process to create educational materials helping high-school teams replicate fast build workflows and discover new rapid development techniques. This project bridges competitive robotics with technical education.',
+        description: 'Built functional FRC competition robots in just 3 days as part of a rapid prototyping challenge. Beyond the engineering feat, we documented the entire process to create educational materials helping high-school teams replicate fast build workflows and discover new rapid development techniques. I principally worked on the design of the disk launcher.',
         technologies: ['FRC', 'Rapid Prototyping', 'Documentation', 'Team Coordination', 'Problem-solving'],
         links: [
             { name: 'Watch Reveal', url: 'https://youtu.be/5d347xy3TyQ' }
@@ -143,6 +144,16 @@ document.querySelectorAll('[data-modal]').forEach(card => {
         // Don't open modal if clicking on a link
         if (e.target.tagName === 'A') return;
         openModal(card.dataset.modal);
+    });
+});
+
+document.querySelectorAll('[data-page]').forEach(card => {
+    card.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') return;
+        const page = card.dataset.page;
+        if (page) {
+            window.location.href = page;
+        }
     });
 });
 
