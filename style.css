@@ -201,12 +201,10 @@ h1.hero-name {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(40%) contrast(1.1);
-    transition: filter 0.4s, transform 0.4s;
+    transition: transform 0.4s;
 }
 
 .hero-img-cell:hover img {
-    filter: grayscale(0%) contrast(1.1);
     transform: scale(1.04);
 }
 
@@ -285,7 +283,6 @@ h2.section-title {
     height: 320px;
     object-fit: cover;
     object-position: top center;
-    filter: grayscale(20%);
     border: 1px solid var(--border);
 }
 
@@ -313,7 +310,7 @@ h2.section-title {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--accent);
-    border: 1px solid rgba(0, 232, 122, 0.3);
+    border: 1px solid rgba(13, 173, 99, 0.35);
     padding: 6px 14px;
     letter-spacing: 0.05em;
 }
@@ -372,7 +369,7 @@ h2.section-title {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(30%) brightness(0.7);
+    filter: brightness(0.8);
     transition: filter 0.4s, transform 0.5s;
 }
 
@@ -383,7 +380,7 @@ h2.section-title {
 }
 
 .project-card:hover img {
-    filter: grayscale(0%) brightness(0.85);
+    filter: brightness(0.95);
     transform: scale(1.05);
 }
 
@@ -893,7 +890,6 @@ h2.section-title {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(20%) contrast(1.05);
 }
 
 .project-section {
@@ -924,7 +920,6 @@ h2.section-title {
     height: auto;
     display: block;
     object-fit: cover;
-    filter: grayscale(15%) contrast(1.05);
 }
 
 .project-detail-title {
@@ -1092,7 +1087,19 @@ footer .copy {
         grid-template-columns: 1fr;
     }
 
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-left {
+        padding: 64px 28px 48px;
+    }
+
     .hero-right {
+        min-height: 75vw;
+    }
+
+    .hero-overlay-text {
         display: none;
     }
 
@@ -1204,5 +1211,118 @@ footer .copy {
 
     .contact-inner {
         padding: 0;
+    }
+}
+/* Experience timeline */
+.xp-list {
+    list-style: none;
+    border-left: 1px solid var(--border);
+    margin: 0 0 48px 4px;
+}
+
+.xp-item {
+    position: relative;
+    padding: 0 0 36px 32px;
+}
+
+.xp-item::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+}
+
+.xp-item--edu::before {
+    background: var(--bg);
+    border: 1px solid var(--accent);
+}
+
+.xp-item:last-child {
+    padding-bottom: 0;
+}
+
+.xp-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.xp-role {
+    font-family: var(--sans);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.xp-org {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin: 4px 0 10px;
+}
+
+.xp-desc {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 680px;
+}
+
+/* Touch screens can't hover: show project text and links below each image */
+@media (hover: none) {
+    .project-card,
+    .projects-showcase-grid .project-card {
+        aspect-ratio: auto;
+        display: block;
+    }
+
+    .project-card img {
+        display: block;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        filter: none;
+    }
+
+    .project-card--logo .sherbee-logo {
+        width: 100%;
+        max-height: none;
+        padding: 24px 14%;
+    }
+
+    .project-card-overlay,
+    .project-card:hover .project-card-overlay {
+        position: static;
+        background: var(--surface);
+        padding: 20px;
+    }
+
+    .project-desc {
+        display: block;
+    }
+
+    .project-link {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-img-cell .label {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .ticker-inner {
+        animation: none;
     }
 }

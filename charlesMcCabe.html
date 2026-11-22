@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charles McCabe — Robotics Engineering</title>
+  <meta name="description" content="Robotics engineering student building autonomous systems: control, perception, embedded software and hardware prototyping.">
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap"
     rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a08'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%230dad63' text-anchor='middle'%3ECM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,7 +19,7 @@
     <div class="nav-logo">CM_portfolio</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#cv">CV</a></li>
+      <li><a href="#cv">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -87,12 +89,8 @@
 
   <div class="stats-bar">
     <div class="stat-item stat-num--offset">
-      <div class="stat-num">10+</div>
-      <div class="stat-label">Projects completed</div>
-    </div>
-    <div class="stat-item stat-num--offset">
-      <div class="stat-num">3+</div>
-      <div class="stat-label">Competitions entered</div>
+      <div class="stat-num">8th</div>
+      <div class="stat-label">Classic Cup — RoboRacer ICRA 2026</div>
     </div>
     <div class="stat-item stat-num--offset">
       <div class="stat-num">3</div>
@@ -100,7 +98,11 @@
     </div>
     <div class="stat-item stat-num--offset">
       <div class="stat-num">1</div>
-      <div class="stat-label">Goal: Vienna 2026</div>
+      <div class="stat-label">Forces AVENIR 2026 prize</div>
+    </div>
+    <div class="stat-item stat-num--offset">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Projects completed</div>
     </div>
   </div>
 
@@ -143,11 +145,40 @@
   <section id="cv" class="cv-section">
     <div class="section-header">
       <span class="section-num">02 —</span>
-      <h2 class="section-title">Curriculum Vitae</h2>
+      <h2 class="section-title">Experience</h2>
     </div>
+    <ol class="xp-list">
+      <li class="xp-item">
+        <div class="xp-date">Sep 2026 — Present</div>
+        <div class="xp-role">Robotics Engineering Intern</div>
+        <div class="xp-org">Sir Steward · Drummondville, QC</div>
+        <p class="xp-desc">Integrating autonomous mobile robots and bringing up new robot hardware. Designing a
+          refrigerated smart-locker system end to end — mechanical, electronics and software — plus a new UI for the
+          locker product line.</p>
+      </li>
+      <li class="xp-item">
+        <div class="xp-date">Fall 2024 &amp; Winter 2026</div>
+        <div class="xp-role">Robotics Engineering Intern</div>
+        <div class="xp-org">TLD Canada · Sherbrooke, QC</div>
+        <p class="xp-desc">Autonomy for a semi-autonomous aircraft baggage loader: ROS 2 navigation and control, a
+          PyTorch classification and segmentation network for onboard perception, and deployment on NVIDIA Jetson
+          under real-time Linux constraints. Field-tested on the vehicle.</p>
+      </li>
+      <li class="xp-item">
+        <div class="xp-date">Summer 2025</div>
+        <div class="xp-role">Robotics Intern</div>
+        <div class="xp-org">Rbot9 · Saint-Hubert, QC</div>
+        <p class="xp-desc">Designed and prototyped a cable-driven industrial robot, contributed to the mechanical
+          redesign of an existing system, and ran validation tests that exposed its weak points.</p>
+      </li>
+      <li class="xp-item xp-item--edu">
+        <div class="xp-date">2023 — 2027</div>
+        <div class="xp-role">B.Eng. Robotics Engineering (Co-op)</div>
+        <div class="xp-org">Université de Sherbrooke</div>
+      </li>
+    </ol>
     <div class="cv-panel">
-      <p class="cv-copy">Download my latest CV for a full breakdown of internships, entrepreneurial work, projects,
-        and technical skills.</p>
+      <p class="cv-copy">The full CV covers every internship, project and technical skill in more detail.</p>
       <a class="btn-primary cv-download" href="resources/CharlesMcCabe-CV-english.pdf" download>Download CV (PDF)
         ↓</a>
     </div>
@@ -164,11 +195,11 @@
       <div class="project-card" data-page="arcus.html">
         <img class="project-card-image project-card-image--contain" src="resources/imgs/arcus_car.jpg" alt="ARCUS">
         <div class="project-card-overlay">
-          <div class="project-type">Autonomous vehicle · Ongoing</div>
+          <div class="project-type">Autonomous racing · Ongoing</div>
           <div class="project-title">ARCUS — Roboracer Vienna 2026</div>
-          <div class="project-desc">Implemented localization and control algorithms (SLAM, particle filter, pure
-            pursuit++)
-            and developed an autonomous driving stack using ROS2. Selected to compete at Roboracer ICRA 2026 in Vienna.
+          <div class="project-desc">Built the team's ROS 2 autonomous driving stack and simulation environment —
+            SLAM, a custom particle filter and pure pursuit++. Placed 8th in the Classic Cup at RoboRacer ICRA 2026
+            in Vienna.
           </div>
           <div class="project-links">
             <a href="arcus.html" class="project-link">Project page →</a>
@@ -185,9 +216,9 @@
         <div class="project-card-overlay">
           <div class="project-type">Entrepreneurial project · Ongoing</div>
           <div class="project-title">Sherbee</div>
-          <div class="project-desc">Contributed to product development for varroa mite detection in beehives, built the
-            website and user tools, developed partnerships with beekeepers and organizations, and helped secure grants
-            and external support.</div>
+          <div class="project-desc">Varroa mite detection for beehives. Built the website and user tools, developed
+            partnerships with beekeepers and organizations including MAPAQ, and helped secure grants. Won the Forces
+            AVENIR 2026 prize.</div>
           <div class="project-links">
             <a href="sherbee.html" class="project-link">Project page →</a>
             <a href="https://sherbee.ca" class="project-link" target="_blank" rel="noopener noreferrer">Visit sherbee.ca
