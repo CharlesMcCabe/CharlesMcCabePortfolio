@@ -1965,3 +1965,7 @@ h2.section-title,
         animation: none;
     }
 }
+
+.hud-sim.hud-replay {
+    background: var(--accent);
+}
