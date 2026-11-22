@@ -4,10 +4,10 @@ const projectData = {
         title: 'ARCUS — Roboracer Vienna 2026',
         type: 'Autonomous racing · Ongoing',
         description: 'ARCUS is an autonomous racing vehicle that placed 8th in the Classic Cup at RoboRacer ICRA 2026 in Vienna. I implemented core localization and control algorithms including SLAM for real-time mapping, particle filtering for robust state estimation, and pure pursuit++ trajectory tracking. The full autonomous driving stack was developed using ROS2 on Linux, enabling real-time perception and decision-making at racing speeds.',
-        technologies: ['ROS2', 'SLAM', 'Particle Filter', 'Pure Pursuit++', 'Linux', 'C++', 'Autonomous Navigation'],
+        technologies: ['ROS2', 'SLAM', 'Particle Filter', 'Pure Pursuit++', 'Linux', 'C++', 'OpenAI Gym', 'RViz', 'Autonomous Navigation'],
         links: [
             { name: 'View on GitHub', url: 'https://github.com/robotique-udes/arcus' },
-            { name: 'Team LinkedIn', url: 'https://www.linkedin.com/company/arcus-project/' }
+            { name: 'Team LinkedIn', url: 'https://www.linkedin.com/company/arcus-robotique-udes' }
         ]
     },
     sherbee: {

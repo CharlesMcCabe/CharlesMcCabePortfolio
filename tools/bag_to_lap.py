@@ -5,9 +5,8 @@ Reads a ROS 1 or ROS 2 bag (no ROS install needed), finds one closed lap, resamp
 resources/data/arcus-lap.js, which telemetry.js picks up automatically.
 
     pip install rosbags numpy
-    python tools/bag_to_lap.py path/to/bag --pose-topic /pf/pose/odom
-    python tools/bag_to_lap.py path/to/bag --pose-topic /pf/pose/odom --speed-topic /drive \
-        --mode-topic /controller_mode --start 42
+    python tools/bag_to_lap.py path/to/bag                      # uses /pf/pose/odom
+    python tools/bag_to_lap.py path/to/bag --start 42 --speed-topic /drive
 
 Supported pose types: nav_msgs/Odometry, geometry_msgs/PoseStamped,
 geometry_msgs/PoseWithCovarianceStamped.
@@ -132,7 +131,7 @@ def smooth(x, n=5):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('bag', type=Path, help='bag directory (ROS 2) or .bag file (ROS 1)')
-    ap.add_argument('--pose-topic', required=True)
+    ap.add_argument('--pose-topic', default='/pf/pose/odom', help='default: /pf/pose/odom (ARCUS particle filter)')
     ap.add_argument('--speed-topic')
     ap.add_argument('--mode-topic')
     ap.add_argument('--start', type=float, default=0.0, help='seconds from bag start to begin searching')

@@ -56,7 +56,7 @@
         <p class="project-detail-copy">One of the things I developed is a real-time trajectory risk assessment system. Using a local costmap, the
           current trajectory is evaluated for potential collisions in real-time with a time-to-collision weighting
           scheme. This enables fluid switching between pure pursuit and disparity extender algorithms for dynamic
-          obstacle avoidance and overtaking. I also implemented the simulation stack to test and validate algorithms
+          obstacle avoidance and overtaking. I also built the simulation stack — an OpenAI Gym environment with a custom bridge to RViz — to test and validate algorithms
           in a controlled environment.</p>
         <ul class="project-highlights">
           <li>Implemented SLAM and particle filtering for robust localization.</li>
@@ -84,6 +84,8 @@
             <span class="tech-tag">Pure Pursuit++</span>
             <span class="tech-tag">Linux</span>
             <span class="tech-tag">C++</span>
+            <span class="tech-tag">OpenAI Gym</span>
+            <span class="tech-tag">RViz</span>
             <span class="tech-tag">Autonomous Navigation</span>
           </div>
         </div>
@@ -94,7 +96,7 @@
   <section class="project-section">
     <h2 class="project-detail-title">Autonomy stack</h2>
     <p class="project-detail-copy">How a LiDAR scan becomes a steering command. Every stage runs onboard the Jetson
-      Orin Nano under ROS 2, and the same graph runs in our simulation environment for testing.</p>
+      Orin Nano under ROS 2, and the same graph runs against our OpenAI Gym simulator, visualized in RViz through a custom bridge.</p>
     <figure>
       <ol class="stack-flow">
         <li class="stack-node">
@@ -127,7 +129,7 @@
     <div class="footer-links">
       <a href="https://github.com/CharlesMcCabe" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="mailto:mccc1201@usherbrooke.ca">mccc1201@usherbrooke.ca</a>
+      <a href="mailto:charles.mccabe@usherbrooke.ca">charles.mccabe@usherbrooke.ca</a>
     </div>
   </footer>
 </body>
