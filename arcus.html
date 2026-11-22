@@ -91,10 +91,42 @@
     </div>
   </section>
 
+  <section class="project-section">
+    <h2 class="project-detail-title">Autonomy stack</h2>
+    <p class="project-detail-copy">How a LiDAR scan becomes a steering command. Every stage runs onboard the Jetson
+      Orin Nano under ROS 2, and the same graph runs in our simulation environment for testing.</p>
+    <figure>
+      <ol class="stack-flow">
+        <li class="stack-node">
+          <div class="stack-step">01 sense</div>
+          <div class="stack-name">LiDAR + odometry</div>
+          <div class="stack-detail">Raw laser scans and wheel odometry</div>
+        </li>
+        <li class="stack-node stack-node--mine">
+          <div class="stack-step">02 localize</div>
+          <div class="stack-name">SLAM + particle filter</div>
+          <div class="stack-detail">Map the track once, then a custom particle filter tracks the pose at speed</div>
+        </li>
+        <li class="stack-node stack-node--mine">
+          <div class="stack-step">03 assess</div>
+          <div class="stack-name">Trajectory risk</div>
+          <div class="stack-detail">Local costmap with time-to-collision weighting along the current path</div>
+        </li>
+        <li class="stack-node stack-node--mine">
+          <div class="stack-step">04 control</div>
+          <div class="stack-name">Pure pursuit++ / disparity extender</div>
+          <div class="stack-detail">Switch smoothly between them to avoid obstacles and overtake</div>
+        </li>
+      </ol>
+      <figcaption class="stack-legend"><span></span>Stages I implemented</figcaption>
+    </figure>
+  </section>
+
   <footer>
     <span class="copy">© 2026 Charles McCabe — Sherbrooke, QC</span>
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/">LinkedIn</a>
+      <a href="https://github.com/CharlesMcCabe" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:mccc1201@usherbrooke.ca">mccc1201@usherbrooke.ca</a>
     </div>
   </footer>

@@ -1760,3 +1760,208 @@ h2.section-title,
     text-transform: none;
     letter-spacing: 0.02em;
 }
+
+/* =========================================================
+   Recruiter-focused additions
+   ========================================================= */
+.hero-sub {
+    margin-bottom: 20px;
+}
+
+.hero-avail {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+    border: 1px solid rgba(13, 173, 99, 0.4);
+    background: rgba(13, 173, 99, 0.08);
+    padding: 8px 14px;
+    margin-bottom: 32px;
+    align-self: flex-start;
+}
+
+.avail-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(13, 173, 99, 0.6);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse {
+    70% { box-shadow: 0 0 0 8px rgba(13, 173, 99, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(13, 173, 99, 0); }
+}
+
+/* Skills grouped by autonomy stack, each linked to evidence */
+.skills-matrix {
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+}
+
+.skill-group {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 6px 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-cat {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    padding-top: 5px;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-items .skill-pill {
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.skill-proof {
+    grid-column: 2;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.skill-proof a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.skill-proof a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.xp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.xp-tags span {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+}
+
+/* ARCUS autonomy stack diagram */
+.stack-flow {
+    display: flex;
+    list-style: none;
+    margin-top: 8px;
+}
+
+.stack-node {
+    flex: 1;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 16px;
+    position: relative;
+}
+
+.stack-node + .stack-node {
+    margin-left: 28px;
+}
+
+.stack-node + .stack-node::before {
+    content: '→';
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-family: var(--mono);
+}
+
+.stack-node--mine {
+    border-color: rgba(13, 173, 99, 0.6);
+    background: rgba(13, 173, 99, 0.06);
+}
+
+.stack-step {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.stack-name {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.stack-detail {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.stack-legend {
+    margin-top: 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.stack-legend span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--accent);
+    background: rgba(13, 173, 99, 0.2);
+    vertical-align: -1px;
+    margin-right: 6px;
+}
+
+@media (max-width: 900px) {
+    .skill-group {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-proof {
+        grid-column: 1;
+    }
+
+    .stack-flow {
+        flex-direction: column;
+    }
+
+    .stack-node + .stack-node {
+        margin-left: 0;
+        margin-top: 28px;
+    }
+
+    .stack-node + .stack-node::before {
+        content: '↓';
+        left: 50%;
+        top: -24px;
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .avail-dot {
+        animation: none;
+    }
+}

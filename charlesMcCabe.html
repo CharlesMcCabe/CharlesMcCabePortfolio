@@ -4,8 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charles McCabe — Robotics Engineering</title>
-  <meta name="description" content="Robotics engineering student building autonomous systems: control, perception, embedded software and hardware prototyping.">
+  <title>Charles McCabe — Autonomy &amp; Robotics Engineer</title>
+  <meta name="description" content="Robotics engineering student building localization, planning and control for autonomous robots on real hardware. 8th at RoboRacer ICRA 2026. Open to 2027 internships and new-grad roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Charles McCabe — Autonomy &amp; Robotics Engineer">
+  <meta property="og:description" content="Localization, planning and control for robots that run on real hardware. 8th at RoboRacer ICRA 2026.">
+  <meta property="og:url" content="https://www.charles-mccabe.com/charlesMcCabe.html">
+  <meta property="og:image" content="https://www.charles-mccabe.com/resources/imgs/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -34,11 +40,14 @@
         Charles<br>
         <span class="accent-line">McCabe</span>
       </h1>
-      <p class="hero-sub">Robotics engineering student building autonomous systems that combine control, perception,
-        embedded software, and rapid hardware prototyping.</p>
+      <p class="hero-sub">Robotics engineering student building localization, planning and control for robots that
+        run on real hardware — from an autonomous race car at ICRA 2026 to industrial autonomous vehicles.</p>
+      <div class="hero-avail"><span class="avail-dot" aria-hidden="true"></span>Open to 2027 autonomy internships
+        &amp; new-grad roles</div>
       <div class="hero-ctas">
         <a href="#projects" class="btn-primary">View projects ↓</a>
-        <a href="#contact" class="btn-ghost">Get in touch →</a>
+        <a href="resources/CharlesMcCabe-CV-english.pdf" class="btn-ghost" download>Download CV ↓</a>
+        <a href="https://github.com/CharlesMcCabe" class="btn-ghost" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </div>
     </div>
     <div class="hero-right telemetry" role="img" aria-label="Animated simulation of an autonomous race car following a racing line">
@@ -130,28 +139,42 @@
       <img class="about-photo" src="resources/imgs/headshot.webp" alt="Charles McCabe">
       <div class="about-text">
         <p>My fascination with robotics started early — I was the kid who took apart every toy to understand what was
-          inside. That curiosity still drives me today as I complete my B.Eng. in Robotics Engineering at Universite de
+          inside. That curiosity still drives me today as I complete my B.Eng. in Robotics Engineering at Université de
           Sherbrooke.</p>
-        <p>I build real-world autonomous systems across robotics internships and personal ventures, with practical
-          experience in ROS2, Linux, embedded deployment on Jetson and Raspberry Pi, and applied perception using
-          OpenCV and PyTorch.</p>
-        <div class="skills-row">
-          <span class="skill-pill">CAD / Onshape</span>
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">C++</span>
-          <span class="skill-pill">ROS2</span>
-          <span class="skill-pill">Linux</span>
-          <span class="skill-pill">Jetson Orin Nano</span>
-          <span class="skill-pill">Raspberry Pi 5</span>
-          <span class="skill-pill">SLAM</span>
-          <span class="skill-pill">EKF / Particle Filter</span>
-          <span class="skill-pill">Path Planning</span>
-          <span class="skill-pill">PCB Design</span>
-          <span class="skill-pill">OpenCV</span>
-          <span class="skill-pill">PyTorch</span>
-          <span class="skill-pill">Computer Vision</span>
-          <span class="skill-pill">KiCad</span>
-          <span class="skill-pill">Autonomous navigation</span>
+        <p>Today I focus on autonomy: state estimation, planning and control in ROS 2, deployed on embedded
+          computers like the Jetson Orin Nano and validated in the field — on a race track, an airport apron and a
+          factory floor.</p>
+        <div class="skills-matrix">
+          <div class="skill-group">
+            <div class="skill-cat">/perception</div>
+            <div class="skill-items"><span class="skill-pill">Computer vision</span><span class="skill-pill">OpenCV</span><span class="skill-pill">PyTorch</span><span class="skill-pill">Classification &amp; segmentation</span><span class="skill-pill">Face tracking</span></div>
+            <span class="skill-proof">used in <a href="#cv">TLD Canada</a>, <a href="vlogus.html">Vlogus</a>, <a href="ballbalancer.html">Ball balancer</a></span>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">/state_estimation</div>
+            <div class="skill-items"><span class="skill-pill">SLAM</span><span class="skill-pill">Particle filter</span><span class="skill-pill">EKF</span><span class="skill-pill">Sensor fusion</span></div>
+            <span class="skill-proof">used in <a href="arcus.html">ARCUS</a></span>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">/planning_control</div>
+            <div class="skill-items"><span class="skill-pill">Pure pursuit++</span><span class="skill-pill">Disparity extender</span><span class="skill-pill">Collision risk (TTC)</span><span class="skill-pill">Path planning</span><span class="skill-pill">Closed-loop control</span></div>
+            <span class="skill-proof">used in <a href="arcus.html">ARCUS</a>, <a href="#cv">TLD Canada</a>, <a href="ballbalancer.html">Ball balancer</a></span>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">/deployment</div>
+            <div class="skill-items"><span class="skill-pill">ROS 1 / ROS 2</span><span class="skill-pill">Linux</span><span class="skill-pill">Real-time Linux</span><span class="skill-pill">Jetson Orin Nano</span><span class="skill-pill">Raspberry Pi 5</span><span class="skill-pill">Arduino</span><span class="skill-pill">Simulation</span><span class="skill-pill">Field testing</span></div>
+            <span class="skill-proof">used in <a href="arcus.html">ARCUS</a>, <a href="#cv">TLD Canada</a>, <a href="#cv">Sir Steward</a></span>
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">/languages</div>
+            <div class="skill-items"><span class="skill-pill">C / C++</span><span class="skill-pill">Python</span><span class="skill-pill">Bash</span><span class="skill-pill">Java</span><span class="skill-pill">JavaScript</span></div>
+            
+          </div>
+          <div class="skill-group">
+            <div class="skill-cat">/hardware</div>
+            <div class="skill-items"><span class="skill-pill">SolidWorks</span><span class="skill-pill">Fusion 360</span><span class="skill-pill">Onshape</span><span class="skill-pill">KiCad / PCB design</span><span class="skill-pill">CodeSys</span><span class="skill-pill">Studio 5000</span><span class="skill-pill">FANUC Roboguide</span></div>
+            <span class="skill-proof">used in <a href="ballbalancer.html">Ball balancer</a>, <a href="#cv">Rbot9</a></span>
+          </div>
         </div>
       </div>
     </div>
@@ -170,14 +193,17 @@
         <p class="xp-desc">Integrating autonomous mobile robots and bringing up new robot hardware. Designing a
           refrigerated smart-locker system end to end — mechanical, electronics and software — plus a new UI for the
           locker product line.</p>
+        <div class="xp-tags"><span>AMR integration</span><span>Hardware bring-up</span><span>Mechanical · electronics · software</span><span>UI design</span></div>
       </li>
       <li class="xp-item">
-        <div class="xp-date">Fall 2024 &amp; Winter 2026</div>
+        <div class="xp-date">Winter 2026 &amp; Fall 2024 · 2 terms</div>
         <div class="xp-role">Robotics Engineering Intern</div>
         <div class="xp-org">TLD Canada · Sherbrooke, QC</div>
-        <p class="xp-desc">Autonomy for a semi-autonomous aircraft baggage loader: ROS 2 navigation and control, a
-          PyTorch classification and segmentation network for onboard perception, and deployment on NVIDIA Jetson
-          under real-time Linux constraints. Field-tested on the vehicle.</p>
+        <p class="xp-desc">Two internship terms on autonomy for a semi-autonomous aircraft baggage loader. Implemented
+          and optimized ROS 2 navigation and control, trained a PyTorch classification and segmentation network for
+          onboard perception, and deployed it on NVIDIA Jetson under real-time Linux constraints. Validated through
+          on-vehicle field testing; also built operator tooling in CodeSys and a custom GUI.</p>
+        <div class="xp-tags"><span>ROS 2</span><span>Navigation &amp; control</span><span>PyTorch</span><span>Segmentation</span><span>NVIDIA Jetson</span><span>Real-time Linux</span><span>Field testing</span></div>
       </li>
       <li class="xp-item">
         <div class="xp-date">Summer 2025</div>
@@ -185,6 +211,7 @@
         <div class="xp-org">Rbot9 · Saint-Hubert, QC</div>
         <p class="xp-desc">Designed and prototyped a cable-driven industrial robot, contributed to the mechanical
           redesign of an existing system, and ran validation tests that exposed its weak points.</p>
+        <div class="xp-tags"><span>Cable-driven robot</span><span>Mechanical design</span><span>Validation testing</span></div>
       </li>
       <li class="xp-item xp-item--edu">
         <div class="xp-date">2023 — 2027</div>
@@ -204,9 +231,8 @@
       <span class="section-num">/projects</span>
       <h2 class="section-title">Projects</h2>
     </div>
-    <p class="projects-subhead">Main showcased projects</p>
+    <p class="projects-subhead">Autonomy &amp; robotics</p>
     <div class="projects-showcase-grid">
-
       <div class="project-card" data-page="arcus.html">
         <img class="project-card-image project-card-image--contain" src="resources/imgs/arcus_car.webp" alt="ARCUS">
         <div class="project-card-overlay">
@@ -223,26 +249,6 @@
               rel="noopener noreferrer">View on GitHub →</a>
             <a href="https://www.linkedin.com/company/arcus-project/" class="project-link" target="_blank"
               rel="noopener noreferrer">View ARCUS on LinkedIn →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-page="sherbee.html">
-        <img class="project-card-image--hive" src="resources/imgs/real_hive.webp"
-          alt="Installing a Sherbee sensor on a beehive" loading="lazy">
-        <div class="project-card-overlay">
-          <span class="badge-best">Forces AVENIR 2026</span>
-          <div class="project-type">Entrepreneurial project · Ongoing</div>
-          <div class="project-title">Sherbee</div>
-          <div class="project-desc">Varroa mite detection for beehives. Built the website and user tools, developed
-            partnerships with beekeepers and organizations including MAPAQ, and helped secure grants. Won the Forces
-            AVENIR 2026 prize.</div>
-          <div class="project-links">
-            <a href="sherbee.html" class="project-link">Project page →</a>
-            <a href="https://sherbee.ca" class="project-link" target="_blank" rel="noopener noreferrer">Visit sherbee.ca
-              →</a>
-            <a href="https://www.linkedin.com/company/sherbee/" class="project-link" target="_blank"
-              rel="noopener noreferrer">View Sherbee on LinkedIn →</a>
           </div>
         </div>
       </div>
@@ -284,9 +290,29 @@
           </div>
         </div>
       </div>
+
+      <div class="project-card" data-page="sherbee.html">
+        <img class="project-card-image--hive" src="resources/imgs/real_hive.webp"
+          alt="Installing a Sherbee sensor on a beehive" loading="lazy">
+        <div class="project-card-overlay">
+          <span class="badge-best">Forces AVENIR 2026</span>
+          <div class="project-type">Entrepreneurial project · Ongoing</div>
+          <div class="project-title">Sherbee</div>
+          <div class="project-desc">Varroa mite detection for beehives. Built the website and user tools, developed
+            partnerships with beekeepers and organizations including MAPAQ, and helped secure grants. Won the Forces
+            AVENIR 2026 prize.</div>
+          <div class="project-links">
+            <a href="sherbee.html" class="project-link">Project page →</a>
+            <a href="https://sherbee.ca" class="project-link" target="_blank" rel="noopener noreferrer">Visit sherbee.ca
+              →</a>
+            <a href="https://www.linkedin.com/company/sherbee/" class="project-link" target="_blank"
+              rel="noopener noreferrer">View Sherbee on LinkedIn →</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <p class="projects-subhead projects-subhead--spaced">More projects</p>
+    <p class="projects-subhead projects-subhead--spaced">Other builds</p>
     <div class="projects-more-grid">
 
       <div class="project-card project-card--modal" data-modal="huski">
@@ -405,7 +431,9 @@
   <footer>
     <span class="copy">© 2026 Charles McCabe — Sherbrooke, QC</span>
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/">LinkedIn</a>
+      <a href="https://github.com/CharlesMcCabe" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/charles-mccabe-aab749368/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="resources/CharlesMcCabe-CV-english.pdf" download>CV</a>
       <a href="mailto:mccc1201@usherbrooke.ca">mccc1201@usherbrooke.ca</a>
     </div>
   </footer>
