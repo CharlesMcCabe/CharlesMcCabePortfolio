@@ -12,10 +12,12 @@
     --surface2: #1a1a18;
     --accent: #0dad63;
     --text: #f0ede6;
-    --muted: #888880;
+    --muted: #9a9a92;
+    --warn: #e8a63c;
+    --best: #b48cff;
     --border: #2a2a28;
-    --mono: 'Space Mono', monospace;
-    --sans: 'Syne', sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
 }
 
 html {
@@ -92,7 +94,7 @@ nav {
 
 .hero-tag {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -113,7 +115,7 @@ nav {
 h1.hero-name {
     font-family: var(--sans);
     font-size: clamp(52px, 6vw, 88px);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 0.95;
     letter-spacing: -0.03em;
     margin-bottom: 8px;
@@ -216,7 +218,7 @@ h1.hero-name {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     padding: 24px 12px 10px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -233,7 +235,7 @@ h1.hero-name {
     bottom: 40px;
     left: 40px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     color: var(--muted);
     writing-mode: vertical-lr;
     letter-spacing: 0.15em;
@@ -258,7 +260,7 @@ section {
 
 .section-num {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.15em;
 }
@@ -266,7 +268,7 @@ section {
 h2.section-title {
     font-family: var(--sans);
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1;
 }
@@ -308,7 +310,7 @@ h2.section-title {
 
 .skill-pill {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     border: 1px solid rgba(13, 173, 99, 0.35);
     padding: 6px 14px;
@@ -323,7 +325,7 @@ h2.section-title {
 
 .projects-subhead {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -420,7 +422,7 @@ h2.section-title {
 
 .project-type {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -442,7 +444,7 @@ h2.section-title {
 
 .project-desc {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: rgba(240, 237, 230, 0.6);
     line-height: 1.6;
     max-width: 420px;
@@ -459,7 +461,7 @@ h2.section-title {
     align-items: center;
     gap: 6px;
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -508,7 +510,7 @@ h2.section-title {
 .stat-num {
     font-family: var(--sans);
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--accent);
     line-height: 1;
     margin-bottom: 8px;
@@ -516,7 +518,7 @@ h2.section-title {
 
 .stat-label {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -563,7 +565,7 @@ h2.section-title {
 .contact-headline {
     font-family: var(--sans);
     font-size: clamp(36px, 4vw, 56px);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.0;
     letter-spacing: -0.02em;
 }
@@ -594,7 +596,7 @@ h2.section-title {
 
 .form-field label {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -645,7 +647,7 @@ h2.section-title {
 .form-status {
     min-height: 1.2em;
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.05em;
 }
@@ -745,14 +747,14 @@ h2.section-title {
 
 .modal-title {
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 8px;
     color: var(--text);
 }
 
 .modal-type {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -789,7 +791,7 @@ h2.section-title {
     padding: 6px 12px;
     border-radius: 4px;
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text);
     letter-spacing: 0.05em;
 }
@@ -852,7 +854,7 @@ h2.section-title {
 
 .project-kicker {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -861,7 +863,7 @@ h2.section-title {
 .project-title-lg {
     font-family: var(--sans);
     font-size: clamp(36px, 4.8vw, 64px);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.05;
 }
@@ -960,7 +962,7 @@ h2.section-title {
 
 .project-tech-panel h4 {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1013,7 +1015,7 @@ footer {
 
 footer .copy {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.05em;
 }
@@ -1025,7 +1027,7 @@ footer .copy {
 
 .footer-links a {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     text-decoration: none;
     letter-spacing: 0.1em;
@@ -1064,7 +1066,7 @@ footer .copy {
 
 .ticker-item {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1197,7 +1199,7 @@ footer .copy {
     }
 
     .nav-links a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .stats-bar {
@@ -1246,7 +1248,7 @@ footer .copy {
 
 .xp-date {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--accent);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1346,7 +1348,7 @@ footer .copy {
 .tl-track-edge { fill: none; stroke: var(--border); stroke-width: 62; stroke-linejoin: round; }
 .tl-track-surface { fill: none; stroke: var(--surface2); stroke-width: 56; stroke-linejoin: round; }
 .tl-raceline { fill: none; stroke: rgba(13, 173, 99, 0.35); stroke-width: 1.5; stroke-dasharray: 6 8; }
-.tl-obstacle { fill: #e0a23a; }
+.tl-obstacle { fill: var(--warn); }
 .tl-trail { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; opacity: 0.45; }
 .tl-look { stroke: var(--text); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.7; }
 .tl-target { fill: none; stroke: var(--text); stroke-width: 1.5; }
@@ -1365,7 +1367,7 @@ footer .copy {
     background: rgba(10, 10, 8, 0.82);
     backdrop-filter: blur(6px);
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     --c: var(--accent);
     background-image:
@@ -1385,7 +1387,7 @@ footer .copy {
 }
 
 .hud-sim {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--bg);
     background: var(--muted);
     padding: 1px 5px;
@@ -1407,7 +1409,7 @@ footer .copy {
 }
 
 .hud-row b.hud-warn {
-    color: #e0a23a;
+    color: var(--warn);
 }
 
 .hud-caption {
@@ -1416,7 +1418,7 @@ footer .copy {
     right: 24px;
     bottom: 20px;
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 12px;
     color: var(--muted);
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1532,13 +1534,13 @@ footer .copy {
         right: 12px;
         min-width: 0;
         padding: 10px 12px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .hud-caption {
         left: 16px;
         bottom: 12px;
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .stats-bar {
@@ -1580,8 +1582,181 @@ footer .copy {
 
 .project-media figcaption {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     line-height: 1.6;
     margin-top: 12px;
+}
+
+/* =========================================================
+   Telemetry refinements: type, palette, project pages
+   ========================================================= */
+
+/* Readable sans for prose; mono stays for data and labels */
+.hero-sub,
+.project-desc,
+.contact-copy,
+.project-summary,
+.modal-description {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0;
+}
+
+.hero-sub {
+    font-size: 17px;
+    max-width: 440px;
+}
+
+.project-desc {
+    font-size: 15px;
+    color: rgba(240, 237, 230, 0.78);
+}
+
+.project-highlights {
+    font-family: var(--sans);
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+h1.hero-name {
+    letter-spacing: -0.045em;
+}
+
+h2.section-title,
+.contact-headline,
+.project-title-lg {
+    letter-spacing: -0.035em;
+}
+
+.nav-logo {
+    text-decoration: none;
+}
+
+/* "Best result" highlights in timing-screen purple */
+.stat--best .stat-num {
+    color: var(--best);
+}
+
+.stat--best::before {
+    --c: var(--best);
+}
+
+.badge-best {
+    align-self: flex-start;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--best);
+    padding: 3px 8px;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+}
+
+/* Experience entries read like log lines */
+.xp-date::before {
+    content: '[';
+    color: var(--muted);
+}
+
+.xp-date::after {
+    content: ']';
+    color: var(--muted);
+}
+
+/* Contact form as a command */
+.form-cmd {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--border);
+    overflow-wrap: anywhere;
+}
+
+.form-status {
+    font-size: 13px;
+}
+
+.form-status--error {
+    color: var(--warn);
+}
+
+/* Project pages carry the HUD styling */
+.project-page .nav-links a {
+    text-transform: none;
+}
+
+.project-kicker {
+    letter-spacing: 0.08em;
+}
+
+.project-kicker::before {
+    content: '● ';
+    color: var(--accent);
+    animation: blink 2s steps(1) infinite;
+}
+
+.project-hero-right,
+.project-media,
+.project-tech-panel {
+    position: relative;
+    --c: var(--accent);
+    background-image:
+        linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+        linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+        linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+        linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c));
+    background-repeat: no-repeat;
+    background-size: 12px 1px, 1px 12px;
+    background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
+}
+
+.project-media + .project-media {
+    margin-top: 0;
+}
+
+.project-tech-panel h4::before {
+    content: '/';
+    color: var(--accent);
+}
+
+.project-tech-panel h4 {
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+    color: var(--text);
+}
+
+.tech-tag {
+    border-radius: 0;
+    border-color: rgba(13, 173, 99, 0.35);
+    color: var(--accent);
+    background: transparent;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-link {
+    border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-kicker::before {
+        animation: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        gap: 32px;
+    }
+}
+
+.project-page .nav-logo {
+    text-transform: none;
+    letter-spacing: 0.02em;
 }

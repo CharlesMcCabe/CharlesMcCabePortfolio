@@ -190,7 +190,7 @@ if (contactForm && formStatus) {
             submitButton.textContent = 'Sending...';
         }
 
-        formStatus.textContent = 'Sending your message...';
+        formStatus.textContent = '[INFO] Publishing...';
         formStatus.classList.remove('form-status--success', 'form-status--error');
 
         try {
@@ -203,15 +203,15 @@ if (contactForm && formStatus) {
             });
 
             if (response.ok) {
-                formStatus.textContent = 'Thanks, your message was sent successfully.';
+                formStatus.textContent = '[INFO] Message delivered. Thanks, I\'ll get back to you soon.';
                 formStatus.classList.add('form-status--success');
                 contactForm.reset();
             } else {
-                formStatus.textContent = 'Sorry, your message could not be sent. Please try again.';
+                formStatus.textContent = '[ERROR] Message could not be sent. Please try again.';
                 formStatus.classList.add('form-status--error');
             }
         } catch {
-            formStatus.textContent = 'Network error. Please check your connection and try again.';
+            formStatus.textContent = '[ERROR] Network error. Please check your connection and try again.';
             formStatus.classList.add('form-status--error');
         } finally {
             if (submitButton) {

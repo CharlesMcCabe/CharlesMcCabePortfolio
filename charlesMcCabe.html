@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charles McCabe — Robotics Engineering</title>
   <meta name="description" content="Robotics engineering student building autonomous systems: control, perception, embedded software and hardware prototyping.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a08'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%230dad63' text-anchor='middle'%3ECM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
@@ -16,7 +18,7 @@
 <body>
 
   <nav>
-    <div class="nav-logo">CM_portfolio</div>
+    <a class="nav-logo" href="charlesMcCabe.html">~/charles_mccabe</a>
     <ul class="nav-links">
       <li><a href="#about">/about</a></li>
       <li><a href="#cv">/experience</a></li>
@@ -105,15 +107,15 @@
   </div>
 
   <div class="stats-bar">
-    <div class="stat-item stat-num--offset">
-      <div class="stat-num">8th</div>
+    <div class="stat-item stat-num--offset stat--best">
+      <div class="stat-num">P8</div>
       <div class="stat-label">Classic Cup — RoboRacer ICRA 2026</div>
     </div>
     <div class="stat-item stat-num--offset">
       <div class="stat-num">3</div>
       <div class="stat-label">Robotics internships</div>
     </div>
-    <div class="stat-item stat-num--offset">
+    <div class="stat-item stat-num--offset stat--best">
       <div class="stat-num">1</div>
       <div class="stat-label">Forces AVENIR 2026 prize</div>
     </div>
@@ -129,7 +131,7 @@
       <h2 class="section-title">About me</h2>
     </div>
     <div class="about-grid">
-      <img class="about-photo" src="resources/imgs/headshot.jpg" alt="Charles McCabe">
+      <img class="about-photo" src="resources/imgs/headshot.webp" alt="Charles McCabe">
       <div class="about-text">
         <p>My fascination with robotics started early — I was the kid who took apart every toy to understand what was
           inside. That curiosity still drives me today as I complete my B.Eng. in Robotics Engineering at Universite de
@@ -210,8 +212,9 @@
     <div class="projects-showcase-grid">
 
       <div class="project-card" data-page="arcus.html">
-        <img class="project-card-image project-card-image--contain" src="resources/imgs/arcus_car.jpg" alt="ARCUS">
+        <img class="project-card-image project-card-image--contain" src="resources/imgs/arcus_car.webp" alt="ARCUS">
         <div class="project-card-overlay">
+          <span class="badge-best">P8 · Classic Cup · ICRA 2026</span>
           <div class="project-type">Autonomous racing · Ongoing</div>
           <div class="project-title">ARCUS — Roboracer Vienna 2026</div>
           <div class="project-desc">Built the team's ROS 2 autonomous driving stack and simulation environment —
@@ -229,9 +232,10 @@
       </div>
 
       <div class="project-card" data-page="sherbee.html">
-        <img class="project-card-image--hive" src="resources/imgs/real_hive.jpg"
+        <img class="project-card-image--hive" src="resources/imgs/real_hive.webp"
           alt="Installing a Sherbee sensor on a beehive" loading="lazy">
         <div class="project-card-overlay">
+          <span class="badge-best">Forces AVENIR 2026</span>
           <div class="project-type">Entrepreneurial project · Ongoing</div>
           <div class="project-title">Sherbee</div>
           <div class="project-desc">Varroa mite detection for beehives. Built the website and user tools, developed
@@ -248,7 +252,7 @@
       </div>
 
       <div class="project-card" data-page="ballbalancer.html">
-        <img src="resources/imgs/bbbot.jpg" alt="Ball Balancer">
+        <img src="resources/imgs/bbbot.webp" alt="Ball Balancer">
         <div class="project-card-overlay">
           <div class="project-type">Mechatronics</div>
           <div class="project-title">Ball balancing robot</div>
@@ -269,7 +273,7 @@
       </div>
 
       <div class="project-card" data-page="vlogus.html">
-        <img src="resources/imgs/vlogus.jpg" alt="Vlogus">
+        <img src="resources/imgs/vlogus.webp" alt="Vlogus">
         <div class="project-card-overlay">
           <div class="project-type">Computer Vision · Web</div>
           <div class="project-title">Vlogus</div>
@@ -290,7 +294,7 @@
     <div class="projects-more-grid">
 
       <div class="project-card project-card--modal" data-modal="huski">
-        <img src="resources/imgs/huski.JPEG" alt="Huski">
+        <img src="resources/imgs/huski.webp" alt="Huski">
         <div class="project-card-overlay">
           <div class="project-type">Mobile robotics</div>
           <div class="project-title">Avalanche rescue robot</div>
@@ -301,7 +305,7 @@
       </div>
 
       <div class="project-card project-card--modal" data-modal="thumper">
-        <img src="resources/imgs/thumper.JPEG" alt="Thumper">
+        <img src="resources/imgs/thumper.webp" alt="Thumper">
         <div class="project-card-overlay">
           <div class="project-type">Mechanical design</div>
           <div class="project-title">Dune Thumper replica</div>
@@ -316,7 +320,7 @@
       </div>
 
       <div class="project-card project-card--modal" data-modal="crc">
-        <img src="resources/imgs/crc.png" alt="CRC">
+        <img src="resources/imgs/crc.webp" alt="CRC">
         <div class="project-card-overlay">
           <div class="project-type">Competition</div>
           <div class="project-title">CRC competition robot</div>
@@ -326,7 +330,7 @@
       </div>
 
       <div class="project-card project-card--modal" data-modal="simulaction">
-        <img src="resources/imgs/simulaction.png" alt="Simulaction">
+        <img src="resources/imgs/simulaction.webp" alt="Simulaction">
         <div class="project-card-overlay">
           <div class="project-type">Web development</div>
           <div class="project-title">Simulaction</div>
@@ -338,7 +342,7 @@
       </div>
 
       <div class="project-card project-card--modal" data-modal="bioterra">
-        <img src="resources/imgs/bioterra.jpg" alt="Bioterra">
+        <img src="resources/imgs/bioterra.webp" alt="Bioterra">
         <div class="project-card-overlay">
           <div class="project-type">Process engineering</div>
           <div class="project-title">Bioterra</div>
@@ -349,7 +353,7 @@
       </div>
 
       <div class="project-card project-card--modal" data-modal="rapidus">
-        <img src="resources/imgs/rapidus.png" alt="Rapidus">
+        <img src="resources/imgs/rapidus.webp" alt="Rapidus">
         <div class="project-card-overlay">
           <div class="project-type">Competition · Sprint</div>
           <div class="project-title">Rapidus — Robot in 3 days</div>
@@ -383,6 +387,7 @@
         </p>
       </div>
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqewlrnp" method="POST">
+        <div class="form-cmd" aria-hidden="true">$ ros2 topic pub --once /contact charles_msgs/Message</div>
         <div class="form-field">
           <label>Name</label>
           <input type="text" name="name" placeholder="John Smith" required>
