@@ -1,7 +1,7 @@
 // Project modal data
 const projectData = {
     arcus: {
-        title: 'ARCUS — Roboracer Vienna 2026',
+        title: 'ARCUS: RoboRacer Vienna 2026',
         type: 'Autonomous racing · Ongoing',
         description: 'ARCUS is an autonomous racing vehicle that placed 8th in the Classic Cup at RoboRacer ICRA 2026 in Vienna. I implemented core localization and control algorithms including SLAM for real-time mapping, particle filtering for robust state estimation, and pure pursuit++ trajectory tracking. The full autonomous driving stack was developed using ROS2 on Linux, enabling real-time perception and decision-making at racing speeds.',
         technologies: ['ROS2', 'SLAM', 'Particle Filter', 'Pure Pursuit++', 'Linux', 'C++', 'OpenAI Gym', 'RViz', 'Autonomous Navigation'],
@@ -79,7 +79,7 @@ const projectData = {
         links: []
     },
     rapidus: {
-        title: 'Rapidus — Robot in 3 days',
+        title: 'Rapidus: robot in 3 days',
         type: 'Competition · Sprint',
         description: 'Built functional FRC competition robots in just 3 days as part of a rapid prototyping challenge. Beyond the engineering feat, we documented the entire process to create educational materials helping high-school teams replicate fast build workflows and discover new rapid development techniques. I principally worked on the design of the disk launcher.',
         technologies: ['FRC', 'Rapid Prototyping', 'Documentation', 'Team Coordination', 'Problem-solving'],

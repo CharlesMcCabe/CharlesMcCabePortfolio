@@ -48,7 +48,7 @@
         const badge = document.querySelector('.hud-sim');
         if (badge) { badge.textContent = 'REPLAY'; badge.classList.add('hud-replay'); }
         const caption = document.querySelector('.hud-caption');
-        if (caption) caption.textContent = lapData.caption || 'Real lap replay — logged on the ARCUS car';
+        if (caption) caption.textContent = lapData.caption || 'Real lap replay, logged on the ARCUS car';
         const wrapper = svg.closest('.telemetry');
         if (wrapper) wrapper.setAttribute('aria-label', 'Replay of a real lap logged by the ARCUS autonomous race car');
     }
@@ -146,7 +146,7 @@
         hud.v.textContent = (v / pxPerM).toFixed(1) + ' m/s';
         if (!REAL) {
             const toObst = gap(s, OBST_S);
-            hud.ttc.textContent = toObst > 0 && toObst < L * 0.2 ? (toObst / v).toFixed(2) + ' s' : '—';
+            hud.ttc.textContent = toObst > 0 && toObst < L * 0.2 ? (toObst / v).toFixed(2) + ' s' : '--';
         }
         const lap = Math.max(0, (now - lapStart) / 1000);
         hud.lap.textContent = String(Math.floor(lap / 60)).padStart(2, '0') + ':' + (lap % 60).toFixed(1).padStart(4, '0');
@@ -183,7 +183,7 @@
     v = REAL ? speedAt(s, 0, 0) : 110;
     render(performance.now());
     if (reduced.matches) {
-        hud.lap.textContent = REAL && lapData.lap_time ? lapData.lap_time.toFixed(2) + ' s' : '—';
+        hud.lap.textContent = REAL && lapData.lap_time ? lapData.lap_time.toFixed(2) + ' s' : '--';
         return;
     }
     s = REAL ? 0 : L * 0.05;
