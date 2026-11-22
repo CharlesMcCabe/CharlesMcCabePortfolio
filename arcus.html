@@ -60,6 +60,8 @@
           in a controlled environment.</p>
         <ul class="project-highlights">
           <li>Implemented SLAM and particle filtering for robust localization.</li>
+          <li>Redesigned the particle filter after ICRA 2026: 96% average scan match in early lap tests, with
+            automatic global relocalization.</li>
           <li>Built pure pursuit++ trajectory tracking for high-speed control.</li>
           <li>Integrated the full ROS2 autonomy stack on Linux.</li>
           <li>Placed 8th in the Classic Cup at RoboRacer ICRA 2026 in Vienna.</li>
@@ -108,7 +110,7 @@
         <li class="stack-node stack-node--mine">
           <div class="stack-step">02 localize</div>
           <div class="stack-name">SLAM + particle filter</div>
-          <div class="stack-detail">Map the track once, then a custom particle filter tracks the pose at speed</div>
+          <div class="stack-detail">Map the track once, then a particle filter (redesigned after ICRA 2026) tracks the pose at speed and relocalizes globally if the car gets lost</div>
         </li>
         <li class="stack-node stack-node--mine">
           <div class="stack-step">03 assess</div>
@@ -123,6 +125,54 @@
       </ol>
       <figcaption class="stack-legend"><span></span>Stages I implemented</figcaption>
     </figure>
+  </section>
+
+  <section class="project-section">
+    <h2 class="project-detail-title">Lessons from ICRA 2026</h2>
+    <p class="project-detail-copy">Racing in Vienna exposed two weaknesses in our system. Here is what went wrong and
+      what we changed for Seoul.</p>
+    <div class="lesson-grid">
+      <article class="lesson">
+        <div class="lesson-topic">/network</div>
+        <h3 class="lesson-title">Interference from 30+ team networks</h3>
+        <dl class="lesson-body">
+          <dt>Problem</dt>
+          <dd>At least 30 teams ran their own networks in the same hall. We streamed visualization over standard
+            ROS 2 networking (DDS), and the interference added heavy latency to messages, even on the physical
+            car.</dd>
+          <dt>Change</dt>
+          <dd>Visualization data now goes over a WebSocket instead of DDS, so it no longer slows down the ROS 2
+            messages the car depends on.</dd>
+        </dl>
+      </article>
+      <article class="lesson lesson--mine">
+        <div class="lesson-topic">/localization</div>
+        <h3 class="lesson-title">A particle filter rebuilt from scratch</h3>
+        <dl class="lesson-body">
+          <dt>Problem</dt>
+          <dd>On a large competition track, with several cars around us and an unreliable network, our particle
+            filter lost accuracy.</dd>
+          <dt>Change</dt>
+          <dd>I completely redesigned it, drawing on several research papers and on other teams' particle
+            filters, then adding my own improvements. I also implemented global localization, so the car
+            relocalizes automatically if it gets lost.</dd>
+        </dl>
+        <div class="lesson-metrics">
+          <div><b>96%</b><span>average scan match during laps</span></div>
+          <div><b>&ge;50%</b><span>scan match at every point of the lap</span></div>
+        </div>
+        <p class="lesson-note">Early results from testing, not yet measured in competition.</p>
+      </article>
+      <article class="lesson lesson--next">
+        <div class="lesson-topic">/control</div>
+        <h3 class="lesson-title">Next for Seoul: MPC and MPPI</h3>
+        <dl class="lesson-body">
+          <dt>Plan</dt>
+          <dd>Next, we're experimenting with model predictive control (MPC) and model
+            predictive path integral (MPPI) controllers for RoboRacer ICRA 2027 in Seoul.</dd>
+        </dl>
+      </article>
+    </div>
   </section>
 
   <footer>
