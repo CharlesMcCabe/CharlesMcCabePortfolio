@@ -18,16 +18,16 @@
   <nav>
     <div class="nav-logo">CM_portfolio</div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#cv">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">/about</a></li>
+      <li><a href="#cv">/experience</a></li>
+      <li><a href="#projects">/projects</a></li>
+      <li><a href="#contact">/contact</a></li>
     </ul>
   </nav>
 
   <section class="hero hero--no-padding">
     <div class="hero-left">
-      <div class="hero-tag">Robotics Engineering — Sherbrooke</div>
+      <div class="hero-tag">ros2 launch charles robotics.launch.py</div>
       <h1 class="hero-name">
         Charles<br>
         <span class="accent-line">McCabe</span>
@@ -39,26 +39,43 @@
         <a href="#contact" class="btn-ghost">Get in touch →</a>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-img-grid">
-        <div class="hero-img-cell">
-          <img src="resources/imgs/bbbot.jpg" alt="Ball balancer robot">
-          <div class="label">Ball Balancer</div>
-        </div>
-        <div class="hero-img-cell">
-          <img src="resources/imgs/vlogus.jpg" alt="Vlogus robot">
-          <div class="label">Vlogus</div>
-        </div>
-        <div class="hero-img-cell">
-          <img src="resources/imgs/huski.JPEG" alt="Avalanche dog robot">
-          <div class="label">Huski Robot</div>
-        </div>
-        <div class="hero-img-cell">
-          <img src="resources/imgs/arcus_car.jpg" alt="ARCUS">
-          <div class="label">ARCUS — Roboracer Vienna 2026</div>
-        </div>
+    <div class="hero-right telemetry" role="img" aria-label="Animated simulation of an autonomous race car following a racing line">
+      <svg class="telemetry-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet"
+        aria-hidden="true">
+        <defs>
+          <pattern id="tl-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M30 0H0V30" fill="none" class="tl-grid-line" />
+          </pattern>
+          <radialGradient id="tl-lidar" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="scale(130)">
+            <stop offset="0" class="tl-lidar-stop-a" />
+            <stop offset="1" class="tl-lidar-stop-b" />
+          </radialGradient>
+        </defs>
+        <rect width="600" height="600" fill="url(#tl-grid)" />
+        <path id="tl-track" class="tl-track-edge"
+          d="M 120 300 C 120 140 220 90 330 110 C 440 130 500 90 520 170 C 540 250 440 280 440 340 C 440 400 520 420 500 490 C 480 560 300 540 220 510 C 140 480 120 420 120 300 Z" />
+        <path class="tl-track-surface" d="M 120 300 C 120 140 220 90 330 110 C 440 130 500 90 520 170 C 540 250 440 280 440 340 C 440 400 520 420 500 490 C 480 560 300 540 220 510 C 140 480 120 420 120 300 Z" />
+        <path class="tl-raceline" d="M 120 300 C 120 140 220 90 330 110 C 440 130 500 90 520 170 C 540 250 440 280 440 340 C 440 400 520 420 500 490 C 480 560 300 540 220 510 C 140 480 120 420 120 300 Z" />
+        <rect id="tl-obstacle" class="tl-obstacle" width="14" height="14" rx="2" />
+        <polyline id="tl-trail" class="tl-trail" points="" />
+        <line id="tl-look" class="tl-look" />
+        <circle id="tl-target" class="tl-target" r="4" />
+        <g id="tl-car">
+          <path class="tl-lidar" d="M0 0 L-92 -92 A130 130 0 1 1 -92 92 Z" fill="url(#tl-lidar)" />
+          <line id="tl-sweep" class="tl-sweep" x1="0" y1="0" x2="130" y2="0" />
+          <rect class="tl-car-body" x="-13" y="-7" width="26" height="14" rx="3" />
+          <rect class="tl-car-nose" x="9" y="-5" width="4" height="10" />
+        </g>
+      </svg>
+      <div class="hud" aria-hidden="true">
+        <div class="hud-title">/arcus/state <span class="hud-sim">SIM</span></div>
+        <div class="hud-row"><span>mode</span><b id="hud-mode">PURE_PURSUIT</b></div>
+        <div class="hud-row"><span>v</span><b id="hud-v">0.0 m/s</b></div>
+        <div class="hud-row"><span>ttc</span><b id="hud-ttc">—</b></div>
+        <div class="hud-row"><span>lap</span><b id="hud-lap">00:00.0</b></div>
       </div>
-      <div class="hero-overlay-text">Robotics — AI — Mechatronics</div>
+      <div class="hud-caption">Illustrative simulation — pure pursuit with disparity-extender overtake</div>
     </div>
   </section>
 
@@ -108,7 +125,7 @@
 
   <section id="about">
     <div class="section-header">
-      <span class="section-num">01 —</span>
+      <span class="section-num">/about</span>
       <h2 class="section-title">About me</h2>
     </div>
     <div class="about-grid">
@@ -144,7 +161,7 @@
 
   <section id="cv" class="cv-section">
     <div class="section-header">
-      <span class="section-num">02 —</span>
+      <span class="section-num">/experience</span>
       <h2 class="section-title">Experience</h2>
     </div>
     <ol class="xp-list">
@@ -186,7 +203,7 @@
 
   <section id="projects">
     <div class="section-header">
-      <span class="section-num">03 —</span>
+      <span class="section-num">/projects</span>
       <h2 class="section-title">Projects</h2>
     </div>
     <p class="projects-subhead">Main showcased projects</p>
@@ -351,7 +368,7 @@
     <div class="contact-inner">
       <div>
         <div class="section-header section-header--compact">
-          <span class="section-num">04 —</span>
+          <span class="section-num">/contact</span>
           <h2 class="section-title">Contact</h2>
         </div>
         <h3 class="contact-headline">
@@ -413,6 +430,7 @@
   </div>
 
   <script src="scripts.js"></script>
+  <script src="telemetry.js"></script>
 </body>
 
 </html>
