@@ -1567,3 +1567,21 @@ footer .copy {
 .section-num {
     white-space: nowrap;
 }
+
+/* Real-world photos */
+.project-card-image--hive {
+    object-position: 30% 55%;
+}
+
+.project-hero-img--hive {
+    aspect-ratio: 4 / 3;
+    object-position: 30% 50%;
+}
+
+.project-media figcaption {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 12px;
+}
