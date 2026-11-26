@@ -52,12 +52,13 @@
         <h2 class="project-detail-title">Overview</h2>
         <p class="project-detail-copy">ARCUS blends autonomous perception, state estimation, and control into a high-speed
           racing platform. My focus was on delivering stable localization and smooth trajectory tracking while
-          keeping the stack real-time and competition-ready.</p>
+          keeping the stack real-time and competition-ready. We are a very small team, so I have contributed to almost
+          every part of the codebase, from perception and localization to planning, control and tooling.</p>
         <p class="project-detail-copy">One of the things I developed is a real-time trajectory risk assessment system. Using a local costmap, the
           current trajectory is evaluated for potential collisions in real-time with a time-to-collision weighting
           scheme. This enables fluid switching between pure pursuit and disparity extender algorithms for dynamic
-          obstacle avoidance and overtaking. I also built the simulation stack (an OpenAI Gym environment with a custom bridge to RViz) to test and validate algorithms
-          in a controlled environment.</p>
+          obstacle avoidance and overtaking. I also built our simulation stack from the ground up (an OpenAI Gym environment with a custom bridge to RViz), which the
+          team uses to test and validate algorithms in a controlled environment before they run on the car.</p>
         <ul class="project-highlights">
           <li>Implemented SLAM and particle filtering for robust localization.</li>
           <li>Redesigned the particle filter after ICRA 2026: 96% average scan match in early lap tests, with
